@@ -1,1 +1,24 @@
-<p>registration-page works!</p>
+<div class="registyle">
+<h1>Sign Up</h1>
+<form [formGroup]="sigup" (ngSubmit)="singup()">
+    <div>
+        <label for="fullName">First Name:</label>
+        <input type="text" name="fullName" id="fullName" formControlName="FirstName">
+    </div><br>
+    <div>
+        <label for="LastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" formControlName="LastName">
+    </div><br>
+    <div>
+        <label for="email">Email address:</label>
+        <input type="text" name="email" id="email" formControlName="Email">
+    </div><br>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" name="pwd" id="password" formControlName="Password">
+    </div><br>
+    <div class="btn">
+        <button type="submit" [disabled]="!sigup.valid">singup</button>
+    </div>
+</form>
+</div>

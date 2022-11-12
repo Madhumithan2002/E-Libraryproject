@@ -1,8 +1,18 @@
+
+<div class="log">
+<h1>LOG IN</h1>
+<form [formGroup]="library" (ngSubmit)="login()">
 <div>
     <label for="fullName">UserName:</label>
-    <input type="text" id="name">
-</div>
+    <input type="text" name="fullName" id="name" formControlName="UserName">
+</div><br>
 <div>
     <label for="password">Password:</label>
-    <input type="pwd" id="pwd">
+    <input type="pwd" name="password" id="pwd"  formControlName="Password">
+</div><br>
+<div class="btn">
+    <button type="submit" [disabled]="!library.valid">LogIn</button>
 </div>
+</form>
+</div>
+

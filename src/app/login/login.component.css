@@ -1,0 +1,12 @@
+.log{
+    border: 1PX solid red;
+    margin: auto;
+    text-align: center;
+    width: 25%;
+    background-color:darkorchid;
+    
+}
+
+.btn{
+    margin-bottom: 2vw;
+}
