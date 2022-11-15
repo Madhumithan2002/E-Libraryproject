@@ -1,24 +1,34 @@
-<div class="registyle">
-<h1>Sign Up</h1>
+<div class="singup">
+     <h1>SING UP</h1>
 <form [formGroup]="sigup" (ngSubmit)="singup()">
-    <div>
-        <label for="fullName">First Name:</label>
-        <input type="text" name="fullName" id="fullName" formControlName="FirstName">
-    </div><br>
-    <div>
-        <label for="LastName">Last Name:</label>
-        <input type="text" name="lastName" id="lastName" formControlName="LastName">
-    </div><br>
-    <div>
-        <label for="email">Email address:</label>
-        <input type="text" name="email" id="email" formControlName="Email">
-    </div><br>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" name="pwd" id="password" formControlName="Password">
-    </div><br>
-    <div class="btn">
-        <button type="submit" [disabled]="!sigup.valid">singup</button>
+    <div class="col-md-4">
+        <label for="validationTooltip01" class="form-label">First name:</label>
+        <input type="text" class="form-control" id="validationTooltip01" formControlName="FirstName">
+        <div class="valid-tooltip">
+            Looks good!
+        </div>
     </div>
-</form>
-</div>
+    <div class="col-md-4">
+        <label for="validationTooltip02" class="form-label">Last name:</label>
+        <input type="text" class="form-control" id="validationTooltip02" formControlName="LastName">
+        <div class="valid-tooltip">
+            Looks good!
+        </div>
+    </div>
+    <div class="sm-3">
+        <label for="validationTooltipUsername" class="form-label">Email:</label>
+        <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationTooltipUsername"
+                aria-describedby="validationTooltipUsernamePrepend" formControlName="Email">
+        </div>
+        <div class="sm-3">
+            <label for="validationTooltipUsername" class="form-label">Password:</label>
+            <div class="input-group has-validation">
+                <input type="password" class="form-control" id="validationTooltipUsername"
+                    aria-describedby="validationTooltipUsernamePrepend" formControlName="Password">
+            </div><br>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary"[disabled]="!sigup.valid">singup</button>
+            </div>
+        </div>

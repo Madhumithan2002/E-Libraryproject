@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { AddbookComponent } from './addbook/addbook.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
-import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
+ 
+  {
+    path: 'Home',
+    component: HomeComponent
+  },
   {
     path: 'login',
     component: LoginComponent
@@ -24,12 +29,8 @@ const routes: Routes = [
     component:AboutpageComponent
   },
   {
-    path: 'search',
-    component:SearchComponent
-  },
-  {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'Home',
     pathMatch: 'full',
   }
 ]

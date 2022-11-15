@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addbook',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular
 })
 export class AddbookComponent implements OnInit {
 
-  constructor() { }
+  constructor(private adim: Router) { }
 
   addbook = new FormGroup({
     BookID: new FormControl('', [Validators.required]),
@@ -19,10 +20,12 @@ export class AddbookComponent implements OnInit {
   })
 
   ngOnInit(): void {
+
+    let UserName = localStorage.getItem('UserName');
+    if (UserName == null || UserName == '') {
+      this.adim.navigateByUrl('/login');
+    }
   }
 
-  addbk() {
-    console.log(this.addbook.value)
-  }
-
+  addbk() { }
 }

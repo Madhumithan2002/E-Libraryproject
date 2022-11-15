@@ -1,10 +1,16 @@
-.registyle{
-    border: 1px solid red;
+.singup{
+    border: 3px solid rgb(212, 60, 60);
     margin: auto;
-    text-align: center;
-    width: 25%;
-    background-color: coral;
+    width: 30%;
+    padding:1%;
+    border-radius: 30px;
+    margin-top: 5%;
+    background-image: url("https://st2.depositphotos.com/3840453/7420/i/600/depositphotos_74208933-stock-photo-empty-wooden-table-and-modern.jpg")
 }
-.btn{
-    margin-bottom: 1vw;
+
+ label{
+    color: white;
+}
+h1{
+    color: white;
 }

@@ -1,28 +1,28 @@
-<div class="add">
+<div class="addhead">
     <h1>Add Book</h1>
-    <form [formGroup]="addbook" (ngSubmit)="addbk()">
+    <form  (ngSubmit)="addbk()">
+        <div class="mb-3">
+            <label for="boookid" class="form-label">Book ID</label>
+            <input class="form-control" type="text" id="formFile" formControlName="BookID">
+        </div>
+        <div class="mb-3">
+            <label for="fullname" class="form-label">Book Title</label>
+            <input class="form-control" type="text" id="formFileMultiple" formControlName="BookTitle">
+        </div>
+        <div class="mb-3">
+            <label for="word" class="form-label">Book Dis:</label>
+            <input class="form-control" type="text" id="formFile" formControlName="BookDesc">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Author Name</label>
+            <input class="form-control form-control-sm" id="formFileSm" type="text" formControlName="AuthorName">
+        </div>
         <div>
-            <label for="boookid">Book ID:</label>
-            <input type="num" name="id" id="number" formControlName="BookID">
-        </div><br>
-        <div>
-            <label for="fullname">Book Title:</label>
-            <input type="text" name="txt" id="txt" formControlName="BookTitle">
-        </div><br>
-        <div>
-            <label for="word">Book Dis:</label>
-            <input type="num" name="bokdisc" id="number" formControlName="BookDesc">
-        </div><br>
-        <div>
-            <label for="name">Author Name:</label>
-            <input type="text" name="name" id="name" formControlName="AuthorName">
-        </div><br>
-        <div>
-            <label for="name">Number of Book Available:</label>
-            <input type="text" name="number" id="num" formControlName="Numofbookavil">
-        </div><br>
+            <label for="name" class="form-label">Number of Book Available</label>
+            <input class="form-control form-control-lg" id="formFileLg" type="text" formControlName="Numofbookavil">
+        </div>
         <div class="btn">
-            <button type="submit">Add Book</button>
+            <button type="submit">AddBook</button>
         </div>
     </form>
 </div>

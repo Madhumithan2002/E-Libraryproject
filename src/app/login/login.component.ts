@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup ,FormControl,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +14,9 @@ export class LoginComponent implements OnInit {
     Password:new FormControl('',[Validators.required])
   })
 
-  
+  useronvalid:boolean=false;
 
-  constructor() { }
+  constructor( private loginn:Router) { }
 
 
 
@@ -24,6 +25,18 @@ export class LoginComponent implements OnInit {
 
   login(){
 
+    console.log(this.library.value);
+
+
+    if(this.library.controls.UserName.value !='madhumithan' || this.library.controls.Password.value !='@2215'){
+      this.useronvalid=true
+    }
+    else{
+      this.useronvalid=false;
+      localStorage.setItem('UserName',this.library.controls.UserName.value);
+      this.loginn.navigateByUrl('/AddBook');
+    }
   }
+
 
 }

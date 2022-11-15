@@ -1,18 +1,21 @@
 
-<div class="log">
-<h1>LOG IN</h1>
+<div class="header">
 <form [formGroup]="library" (ngSubmit)="login()">
-<div>
-    <label for="fullName">UserName:</label>
-    <input type="text" name="fullName" id="name" formControlName="UserName">
-</div><br>
-<div>
-    <label for="password">Password:</label>
-    <input type="pwd" name="password" id="pwd"  formControlName="Password">
-</div><br>
-<div class="btn">
-    <button type="submit" [disabled]="!library.valid">LogIn</button>
+    <div class="mb-3">
+      <label for="fullName" class="form-label">UserName:</label>
+      <input type="text" class="form-control" id="name" formControlName="UserName">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="Password">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Remainder</label>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!library.valid">LogIn</button>
+    <div *ngIf="useronvalid">
+        <span style="color:red">Invalid user,please Enter the correct value</span>
+    </div>
+  </form>
 </div>
-</form>
-</div>
-

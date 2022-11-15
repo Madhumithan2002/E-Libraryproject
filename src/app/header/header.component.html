@@ -1,10 +1,47 @@
 
-<div class="head">
-<ul class="style">
-    <li><a routerLink="/signup" routerLinkActive="compActive">SignUp</a></li>
-    <li><a routerLink="/login" routerLinkActive="compActive">LogIn</a></li>
-    <li><a routerLink="/AddBook" routerLinkActive="compActive">AddBook</a></li>
-    <li><a routerLink="/search" routerLinkActive="compActive">Search</a></li>
-    <li><a routerLink="/about" routerLinkActive="compActive">About Library</a></li>
-</ul>
-</div>
+    <nav class="navbar navbar-expand-lg bg-light  position-relative">
+        <div class="container-fluid">
+            <a routerLink="/Home" routerLinkActive="compActive" style="font-size:larger;" class="navbar-brand"
+                href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a routerLink="/login" routerLinkActive="compActive" style="font-size:larger;" class="navbar-brand"
+                href="#">LogIn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a routerLink="/signup" routerLinkActive="compActive" style="font-size:larger  ;"
+                            class="nav-link active" aria-current="page" href="#">SignUp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/AddBook" routerLinkActive="compActive" style="font-size:larger  ;"
+                            class="nav-link" href="#">Add Book</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a routerLink="/about" routerLinkActive="compActive" style="font-size:larger  ;"
+                            class="nav-link dropdown-toggle" href="#" role="button">
+                            About
+                        </a>
+
+                    <li class="nav-item">
+                        <form class="d-flex" role="search">
+                            <input routerLink="/search" routerLinkActive="compActive" style="font-size:larger  ;"
+                                class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </li>
+                    <li id="logout" position-ansolute end-0>
+                        <a href="#" (click)="logout()" style="font-size:larger  ;" class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>

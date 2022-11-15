@@ -9,7 +9,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
-import { SearchComponent } from './search/search.component'
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { SearchComponent } from './search/search.component'
     HeaderComponent,
     AddbookComponent,
     AboutpageComponent,
-    SearchComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

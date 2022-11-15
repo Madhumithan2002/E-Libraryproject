@@ -1,4 +1,4 @@
-export interface AddBook{
+export interface addbook{
     BookID:number;
     BookTitle:string;
     BookDesc:string;
