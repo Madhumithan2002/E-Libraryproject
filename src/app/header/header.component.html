@@ -1,6 +1,6 @@
 
-    <nav class="navbar navbar-expand-lg bg-light  position-relative">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-light position-relative">
+        <div class="container-fluid ">
             <a routerLink="/Home" routerLinkActive="compActive" style="font-size:larger;" class="navbar-brand"
                 href="#">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -18,17 +18,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a routerLink="/signup" routerLinkActive="compActive" style="font-size:larger  ;"
-                            class="nav-link active" aria-current="page" href="#">SignUp</a>
-                    </li>
-                    <li class="nav-item">
                         <a routerLink="/AddBook" routerLinkActive="compActive" style="font-size:larger  ;"
                             class="nav-link" href="#">Add Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/AllBooks" routerLinkActive="compActive" style="font-size:larger  ;"
+                            class="nav-link" href="#">All Books</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a routerLink="/about" routerLinkActive="compActive" style="font-size:larger  ;"
                             class="nav-link dropdown-toggle" href="#" role="button">
-                            About
+                            About page
                         </a>
 
                     <li class="nav-item">
@@ -38,8 +38,8 @@
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </li>
-                    <li id="logout" position-ansolute end-0>
-                        <a href="#" (click)="logout()" style="font-size:larger  ;" class="nav-link" href="#">Logout</a>
+                    <li id="logout" class="position-absolute end-0">
+                        <a href="#" (click)="logout()" class="nav-link"><i class="fa-solid fa-right-from-bracket fa-1x"></i></a>
                     </li>
                 </ul>
             </div>

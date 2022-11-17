@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { AddbookComponent } from './addbook/addbook.component';
+import { BooklistComponent } from './booklist/booklist.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PriceComponent } from './price/price.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 const routes: Routes = [
@@ -23,6 +25,10 @@ const routes: Routes = [
   {
     path: 'AddBook',
     component:AddbookComponent
+  },
+  {
+    path: 'AllBooks',
+    component:BooklistComponent
   },
   {
     path: 'about',

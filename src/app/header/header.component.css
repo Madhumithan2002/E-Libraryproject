@@ -3,7 +3,7 @@
     color: red !important;
     text-decoration: double;
 }
-ul #logout {
+ #logout {
     float:right;
 }
 .container-fluid{

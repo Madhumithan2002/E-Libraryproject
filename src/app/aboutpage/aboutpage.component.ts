@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutpageComponent implements OnInit {
 
-  imgURL:string="https://i0.wp.com/rabble.ca/wp-content/uploads/2019/08/book-865x400.jpg?fit=%2C&ssl=1"
+  imgURL:string="https://www.indiaspend.com/h-upload/old_images/343089-library1440.jpg"
 
   constructor() { }
 

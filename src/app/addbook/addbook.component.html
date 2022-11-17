@@ -1,6 +1,6 @@
 <div class="addhead">
     <h1>Add Book</h1>
-    <form  (ngSubmit)="addbk()">
+    <form [formGroup]="addbook" (ngSubmit)="addbk()">
         <div class="mb-3">
             <label for="boookid" class="form-label">Book ID</label>
             <input class="form-control" type="text" id="formFile" formControlName="BookID">
@@ -10,8 +10,8 @@
             <input class="form-control" type="text" id="formFileMultiple" formControlName="BookTitle">
         </div>
         <div class="mb-3">
-            <label for="word" class="form-label">Book Dis:</label>
-            <input class="form-control" type="text" id="formFile" formControlName="BookDesc">
+            <label for="word" class="form-label">Book des</label>
+            <input class="form-control" type="text" id="formFile" formControlName=" Bookdes">
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Author Name</label>
@@ -26,3 +26,30 @@
         </div>
     </form>
 </div>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">BookID</th>
+        <th scope="col">BookTitle</th>
+        <th scope="col">Bookdes</th>
+        <th scope="col">AuthorName</th>
+        <th scope="col">Number of Book Available</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of mybooks">
+        <th scope="row"></th>
+        <td>{{b.BookID}}</td>
+        <td>{{b.BookTitle}}</td>
+        <td>{{b.Bookdes}}</td>
+        <td>{{b.AuthorName}}</td>
+        <td>{{b.Numofbookavil}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+

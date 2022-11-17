@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -11,10 +11,12 @@ export class AddbookComponent implements OnInit {
 
   constructor(private adim: Router) { }
 
-  addbook = new FormGroup({
+   mybooks: any[] = [];
+
+     addbook = new FormGroup({
     BookID: new FormControl('', [Validators.required]),
     BookTitle: new FormControl('', [Validators.required, Validators.minLength(50)]),
-    BookDesc: new FormControl('', [Validators.required, Validators.minLength(150)]),
+    Bookdes: new FormControl('', [Validators.required, Validators.minLength(150)]),
     AuthorName: new FormControl('', [Validators.required, Validators.minLength(50)]),
     Numofbookavil: new FormControl('', [Validators.required]),
   })
@@ -27,5 +29,21 @@ export class AddbookComponent implements OnInit {
     }
   }
 
-  addbk() { }
+  addbk() {
+
+    var Bid = this.addbook.get('BookID')?.value;
+    var title = this.addbook.get('BookTitle')?.value;
+    var des = this.addbook.get(' Bookdes')?.value;
+    var Aname = this.addbook.get('AuthorName')?.value;
+    var numbooks = this.addbook.get('Numofbookavil')?.value;
+
+
+     this.mybooks.push({
+      BookID: Bid,
+      BookTitle: title,
+      Bookdes: des,
+      AuthorName: Aname,
+      Numofbookavil: numbooks,
+    })
+  }
 }

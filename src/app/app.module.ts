@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { HomeComponent } from './home/home.component';
+import { PriceComponent } from './price/price.component';
+import { BooklistComponent } from './booklist/booklist.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { HomeComponent } from './home/home.component';
     AddbookComponent,
     AboutpageComponent,
     HomeComponent,
+    PriceComponent,
+    BooklistComponent,
   ],
   imports: [
     BrowserModule,
