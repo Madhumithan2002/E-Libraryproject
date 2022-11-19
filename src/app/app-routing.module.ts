@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PriceComponent } from './price/price.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import {AuthGuard} from './auth.guard'
 
 const routes: Routes = [
  
@@ -24,7 +25,8 @@ const routes: Routes = [
   },
   {
     path: 'AddBook',
-    component:AddbookComponent
+    component:AddbookComponent,
+    //canActivate:[AuthGuard]
   },
   {
     path: 'AllBooks',

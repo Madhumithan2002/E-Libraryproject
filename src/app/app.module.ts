@@ -12,7 +12,7 @@ import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { HomeComponent } from './home/home.component';
 import { PriceComponent } from './price/price.component';
 import { BooklistComponent } from './booklist/booklist.component';
-
+import {AuthGuard} from './auth.guard'
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { BooklistComponent } from './booklist/booklist.component';
   
     
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

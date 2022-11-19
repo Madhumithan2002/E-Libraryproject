@@ -13,10 +13,10 @@ export class AddbookComponent implements OnInit {
 
    mybooks: any[] = [];
 
-     addbook = new FormGroup({
+  @Input()addbook = new FormGroup({
     BookID: new FormControl('', [Validators.required]),
     BookTitle: new FormControl('', [Validators.required, Validators.minLength(50)]),
-    Bookdes: new FormControl('', [Validators.required, Validators.minLength(150)]),
+    Bookprice: new FormControl('', [Validators.required, Validators.minLength(150)]),
     AuthorName: new FormControl('', [Validators.required, Validators.minLength(50)]),
     Numofbookavil: new FormControl('', [Validators.required]),
   })
@@ -33,16 +33,16 @@ export class AddbookComponent implements OnInit {
 
     var Bid = this.addbook.get('BookID')?.value;
     var title = this.addbook.get('BookTitle')?.value;
-    var des = this.addbook.get(' Bookdes')?.value;
     var Aname = this.addbook.get('AuthorName')?.value;
+    var price = this.addbook.get('Bookprice')?.value;
     var numbooks = this.addbook.get('Numofbookavil')?.value;
 
 
      this.mybooks.push({
       BookID: Bid,
       BookTitle: title,
-      Bookdes: des,
       AuthorName: Aname,
+      Bookprice: price,
       Numofbookavil: numbooks,
     })
   }

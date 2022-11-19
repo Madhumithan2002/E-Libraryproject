@@ -39,7 +39,7 @@
                         </form>
                     </li>
                     <li id="logout" class="position-absolute end-0">
-                        <a href="#" (click)="logout()" class="nav-link"><i class="fa-solid fa-right-from-bracket fa-1x"></i></a>
+                        <a href="#" (click)="logout()" class="nav-link" *ngIf="userlog != false"><i class="fa-solid fa-right-from-bracket fa-1x"></i></a>
                     </li>
                 </ul>
             </div>

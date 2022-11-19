@@ -10,13 +10,13 @@
             <input class="form-control" type="text" id="formFileMultiple" formControlName="BookTitle">
         </div>
         <div class="mb-3">
-            <label for="word" class="form-label">Book des</label>
-            <input class="form-control" type="text" id="formFile" formControlName=" Bookdes">
-        </div>
-        <div class="mb-3">
             <label for="name" class="form-label">Author Name</label>
             <input class="form-control form-control-sm" id="formFileSm" type="text" formControlName="AuthorName">
         </div>
+        <div class="mb-3">
+          <label for="word" class="form-label">Book Price</label>
+          <input class="form-control" type="text" id="formFile" formControlName="Bookprice">
+      </div>
         <div>
             <label for="name" class="form-label">Number of Book Available</label>
             <input class="form-control form-control-lg" id="formFileLg" type="text" formControlName="Numofbookavil">
@@ -31,11 +31,11 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">S.no</th>
         <th scope="col">BookID</th>
         <th scope="col">BookTitle</th>
-        <th scope="col">Bookdes</th>
         <th scope="col">AuthorName</th>
+        <th scope="col">Book Price</th>
         <th scope="col">Number of Book Available</th>
       </tr>
     </thead>
@@ -44,8 +44,8 @@
         <th scope="row"></th>
         <td>{{b.BookID}}</td>
         <td>{{b.BookTitle}}</td>
-        <td>{{b.Bookdes}}</td>
         <td>{{b.AuthorName}}</td>
+        <td>{{b.Bookprice}}</td>
         <td>{{b.Numofbookavil}}</td>
       </tr>
      

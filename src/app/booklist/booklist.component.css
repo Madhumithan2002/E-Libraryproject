@@ -1,0 +1,9 @@
+table ,tr,td,th{
+    border: 1px solid rgb(97, 82, 82);
+    border-collapse: collapse;
+    text-align: center;
+}
+.tab{
+    padding-left: 14%;
+    
+}
