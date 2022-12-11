@@ -1,9 +1,17 @@
-table ,tr,td,th{
-    border: 1px solid rgb(97, 82, 82);
-    border-collapse: collapse;
-    text-align: center;
+h3 {
+    display: inline;
 }
-.tab{
-    padding-left: 14%;
-    
+.add-footer {
+    margin-top: 25%;
+}
+button {
+    border-radius: 5px;
+
+}
+button:hover {
+    background-color: green;
+    color: #fff;
+}
+select {
+    margin-bottom: 15px;
 }

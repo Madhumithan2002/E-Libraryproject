@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     else{
       this.useronvalid=false;
       localStorage.setItem('UserName',this.library.controls.UserName.value);
-      this.loginn.navigateByUrl('/AddBook');
+      this.loginn.navigateByUrl('/Home');
     }
   }
 
